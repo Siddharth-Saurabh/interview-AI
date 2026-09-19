@@ -83,9 +83,7 @@ export default function Navbar({
           onKeyDown={(e) => e.key === 'Enter' && handleNavClick('interview')}
           title="InterviewAI Home"
         >
-          <div className="navbar-logo-icon">
-            <Sparkles size={20} color="#fff" />
-          </div>
+          <div className="navbar-logo-icon" style={{ overflow: 'hidden' }}><img src="/app-icon.png" alt="InterviewAI" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} /></div>
           <div className="navbar-brand-text">
             <span className="navbar-title">
               Interview<span className="navbar-title-gradient">AI</span>
@@ -291,5 +289,6 @@ export default function Navbar({
     </header>
   );
 }
+
 
 
