@@ -1,9 +1,15 @@
-# 🎓 InterviewAI: Complete Architectural Blueprint & Engineering Study Material
+﻿# 🎓 InterviewAI: Complete Architectural Blueprint & Engineering Study Material
 *A Step-by-Step Guide on How InterviewAI was Built, How Each Component Works, and Why Key Design Decisions Were Made.*
+
+### 🌐 Live Deployments
+- 🚀 **Live Frontend Application**: [https://interview-ai-nu-one.vercel.app/](https://interview-ai-nu-one.vercel.app/)
+- ⚙️ **Live Backend API**: [https://interview-ai-y18k.onrender.com/](https://interview-ai-y18k.onrender.com/)
+- 🩺 **API Health Check**: [https://interview-ai-y18k.onrender.com/api/health](https://interview-ai-y18k.onrender.com/api/health)
+- 📦 **GitHub Repository**: [https://github.com/Siddharth-Saurabh/interview-AI](https://github.com/Siddharth-Saurabh/interview-AI)
 
 ---
 
-## 📌 Table of Contents
+## ðŸ“Œ Table of Contents
 1. [Executive Summary & High-Level Architecture](#1-executive-summary--high-level-architecture)
 2. [End-to-End System Flow](#2-end-to-end-system-flow)
 3. [Step-by-Step: How to Build InterviewAI from Scratch](#3-step-by-step-how-to-build-interviewai-from-scratch)
@@ -31,36 +37,36 @@
 2. **Classical Text & Coding Assessment**: Markdown text editor, STAR method structuring templates, JavaScript code playground, and question category tracking.
 
 ```
-┌──────────────────────────────────────────────────────────────────────────┐
-│                             CLIENT LAYER (React 18 + Vite)               │
-│                                                                          │
-│  ┌───────────────────────┐  ┌─────────────────────────────────────────┐  │
-│  │   Navbar & Balance    │  │  Setup (Mode, Persona, Round, Roles)    │  │
-│  └───────────────────────┘  └─────────────────────────────────────────┘  │
-│  ┌───────────────────────┐  ┌─────────────────────────────────────────┐  │
-│  │ Virtual Studio / PIP  │  │ STT (Web Speech) + TTS (SpeechSynthesis)│  │
-│  └───────────────────────┘  └─────────────────────────────────────────┘  │
-│  ┌───────────────────────┐  ┌─────────────────────────────────────────┐  │
-│  │ Scorecard & Feedback  │  │ Final Multi-Metric Report & PDF Export  │  │
-│  └───────────────────────┘  └─────────────────────────────────────────┘  │
-└────────────────────────────────────┬─────────────────────────────────────┘
-                                     │ REST JSON APIs + JWT Auth
-┌────────────────────────────────────▼─────────────────────────────────────┐
-│                            SERVER LAYER (Node.js + Express 5)            │
-│                                                                          │
-│  ┌───────────────────────┐  ┌─────────────────────────────────────────┐  │
-│  │  Auth & Token Router  │  │  Interview Generator & Evaluator Router │  │
-│  └───────────────────────┘  └─────────────────────────────────────────┘  │
-│  ┌───────────────────────┐  ┌─────────────────────────────────────────┐  │
-│  │ Razorpay Purchase API │  │  Multi-Model Cascade Fallback Engine    │  │
-│  └───────────────────────┘  └─────────────────────────────────────────┘  │
-└──────────────┬─────────────────────────────────────────────┬─────────────┘
-               │                                             │
-┌──────────────▼──────────────┐               ┌──────────────▼─────────────┐
-│       DATABASE LAYER        │               │     EXTERNAL AI SERVICES   │
-│  - MongoDB Atlas (Primary)  │               │  - OpenRouter API          │
-│  - In-Memory Maps (Fallback)│               │    (DeepSeek, Llama, Qwen) │
-└─────────────────────────────┘               └────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚                             CLIENT LAYER (React 18 + Vite)               â”‚
+â”‚                                                                          â”‚
+â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”‚
+â”‚  â”‚   Navbar & Balance    â”‚  â”‚  Setup (Mode, Persona, Round, Roles)    â”‚  â”‚
+â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â”‚
+â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”‚
+â”‚  â”‚ Virtual Studio / PIP  â”‚  â”‚ STT (Web Speech) + TTS (SpeechSynthesis)â”‚  â”‚
+â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â”‚
+â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”‚
+â”‚  â”‚ Scorecard & Feedback  â”‚  â”‚ Final Multi-Metric Report & PDF Export  â”‚  â”‚
+â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                                     â”‚ REST JSON APIs + JWT Auth
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚                            SERVER LAYER (Node.js + Express 5)            â”‚
+â”‚                                                                          â”‚
+â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”‚
+â”‚  â”‚  Auth & Token Router  â”‚  â”‚  Interview Generator & Evaluator Router â”‚  â”‚
+â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â”‚
+â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”‚
+â”‚  â”‚ Razorpay Purchase API â”‚  â”‚  Multi-Model Cascade Fallback Engine    â”‚  â”‚
+â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+               â”‚                                             â”‚
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”               â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚       DATABASE LAYER        â”‚               â”‚     EXTERNAL AI SERVICES   â”‚
+â”‚  - MongoDB Atlas (Primary)  â”‚               â”‚  - OpenRouter API          â”‚
+â”‚  - In-Memory Maps (Fallback)â”‚               â”‚    (DeepSeek, Llama, Qwen) â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜               â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ---
@@ -72,12 +78,12 @@ Here is the chronological journey of a candidate using the application:
 ```mermaid
 sequenceDiagram
     autonumber
-    actor Candidate as 👤 Candidate
-    participant UI as 💻 React Client
-    participant STT as 🎙️ Web Speech API
-    participant Server as ⚙️ Express Backend
-    participant AI as 🤖 OpenRouter (DeepSeek/Llama)
-    participant DB as 🗄️ MongoDB / In-Memory
+    actor Candidate as ðŸ‘¤ Candidate
+    participant UI as ðŸ’» React Client
+    participant STT as ðŸŽ™ï¸ Web Speech API
+    participant Server as âš™ï¸ Express Backend
+    participant AI as ðŸ¤– OpenRouter (DeepSeek/Llama)
+    participant DB as ðŸ—„ï¸ MongoDB / In-Memory
 
     Candidate->>UI: Selects Mode (Virtual), Persona (Strict), Role & Round
     UI->>Server: POST /api/interview/generate { role, round, mode, personality }
@@ -244,8 +250,8 @@ Located in `client/src/index.css` and `client/src/components/Navbar.jsx`:
    - Glassmorphism: `backdrop-filter: blur(24px)`, subtle white borders (`rgba(255, 255, 255, 0.08)`).
 2. **Responsive Breakpoints**:
    - **Large Desktop (`>= 1280px`)**: Full navbar, generous 22px gaps, untruncated profile names, container max-width `1360px`.
-   - **Tablet (`768px – 1023px`)**: Compact 10px spacing, truncated usernames.
-   - **Mobile (`< 768px` down to `320px`)**: Clean top bar with logo and ☰ button; profile, tokens, and navigation housed in a slide-down drawer.
+   - **Tablet (`768px â€“ 1023px`)**: Compact 10px spacing, truncated usernames.
+   - **Mobile (`< 768px` down to `320px`)**: Clean top bar with logo and â˜° button; profile, tokens, and navigation housed in a slide-down drawer.
 
 ---
 
@@ -316,15 +322,16 @@ Located in `server/controllers/payment.controller.js` and `client/src/components
 
 ---
 
-## 👨‍💻 Author & Project Architect
+## ðŸ‘¨â€ðŸ’» Author & Project Architect
 
 **Siddharth Saurabh**
-* 🎓 **Chandigarh University** • 2nd Year Student
-* 💻 **B.E. in Computer Science & Engineering (CSE)**
-* 🌐 GitHub: [@Siddharth-Saurabh](https://github.com/Siddharth-Saurabh)
-* 📜 License: [MIT License](file:///c:/Mern%20Stack/InterviewAI/LICENSE) • Copyright © 2026 Siddharth Saurabh
+* ðŸŽ“ **Chandigarh University** â€¢ 2nd Year Student
+* ðŸ’» **B.E. in Computer Science & Engineering (CSE)**
+* ðŸŒ GitHub: [@Siddharth-Saurabh](https://github.com/Siddharth-Saurabh)
+* ðŸ“œ License: [MIT License](file:///c:/Mern%20Stack/InterviewAI/LICENSE) â€¢ Copyright Â© 2026 Siddharth Saurabh
 
 ---
 
-*Authored for the **InterviewAI** Engineering Platform • 2026*
+*Authored for the **InterviewAI** Engineering Platform â€¢ 2026*
+
 

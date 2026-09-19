@@ -1,21 +1,27 @@
-# InterviewAI — Platform Documentation & Architectural Manual 📘
+﻿# InterviewAI — Platform Documentation & Architectural Manual 📖
 
 > **Production-Grade MERN Stack AI Mock Interview Platform with 2D Animated Avatar Video Calling, Monaco Code Studio, and In-Browser Computer Vision Telemetry.**
 
+### 🌐 Live Deployments
+- 🚀 **Live Frontend Application**: [https://interview-ai-nu-one.vercel.app/](https://interview-ai-nu-one.vercel.app/)
+- ⚙️ **Live Backend API**: [https://interview-ai-y18k.onrender.com/](https://interview-ai-y18k.onrender.com/)
+- 🩺 **API Health Check**: [https://interview-ai-y18k.onrender.com/api/health](https://interview-ai-y18k.onrender.com/api/health)
+- 📦 **GitHub Repository**: [https://github.com/Siddharth-Saurabh/interview-AI](https://github.com/Siddharth-Saurabh/interview-AI)
+
 ---
 
-## 📑 Table of Contents
+## ðŸ“‘ Table of Contents
 
 1. [Executive Summary](#-executive-summary)
 2. [System Architecture & Data Flow](#-system-architecture--data-flow)
 3. [Core Feature Breakdown](#-core-feature-breakdown)
-   - [1. 📹 AI Video Call Studio & 2D Talking Avatars](#1--ai-video-call-studio--2d-talking-avatars)
-   - [2. 👁️ Real-Time Computer Vision & Body Language Telemetry](#2-️-real-time-computer-vision--body-language-telemetry)
-   - [3. 💻 Monaco Code Studio & Algorithmic Sandbox](#3--monaco-code-studio--algorithmic-sandbox)
-   - [4. 🎙️ Dual-Engine Voice Synthesizer & Speech Recognition](#4-️-dual-engine-voice-synthesizer--speech-recognition)
-   - [5. 🎯 4-Stage Hiring Pipeline Simulator](#5--4-stage-hiring-pipeline-simulator)
-   - [6. 📊 Multi-Dimensional Competency & Scoring Rubric](#6--multi-dimensional-competency--scoring-rubric)
-   - [7. 💳 Credits Gateway & Firebase Authentication](#7--credits-gateway--firebase-authentication)
+   - [1. ðŸ“¹ AI Video Call Studio & 2D Talking Avatars](#1--ai-video-call-studio--2d-talking-avatars)
+   - [2. ðŸ‘ï¸ Real-Time Computer Vision & Body Language Telemetry](#2-ï¸-real-time-computer-vision--body-language-telemetry)
+   - [3. ðŸ’» Monaco Code Studio & Algorithmic Sandbox](#3--monaco-code-studio--algorithmic-sandbox)
+   - [4. ðŸŽ™ï¸ Dual-Engine Voice Synthesizer & Speech Recognition](#4-ï¸-dual-engine-voice-synthesizer--speech-recognition)
+   - [5. ðŸŽ¯ 4-Stage Hiring Pipeline Simulator](#5--4-stage-hiring-pipeline-simulator)
+   - [6. ðŸ“Š Multi-Dimensional Competency & Scoring Rubric](#6--multi-dimensional-competency--scoring-rubric)
+   - [7. ðŸ’³ Credits Gateway & Firebase Authentication](#7--credits-gateway--firebase-authentication)
 4. [Component Hierarchy & Frontend Architecture](#-component-hierarchy--frontend-architecture)
 5. [Backend API Reference & Schema Definitions](#-backend-api-reference--schema-definitions)
 6. [Security, In-Browser Privacy & Proctoring](#-security-in-browser-privacy--proctoring)
@@ -23,7 +29,7 @@
 
 ---
 
-## 🌟 Executive Summary
+## ðŸŒŸ Executive Summary
 
 **InterviewAI** is a full-stack, enterprise-grade mock interview simulator built on the **MERN** stack (MongoDB, Express.js, React 18, Node.js). Designed for software engineers preparing for top-tier tech roles, it replicates real-world hiring loops (Screening, Live Coding, System Design, Behavioral Bar Raiser).
 
@@ -35,7 +41,7 @@
 
 ---
 
-## 🏗️ System Architecture & Data Flow
+## ðŸ—ï¸ System Architecture & Data Flow
 
 ```mermaid
 flowchart TD
@@ -85,19 +91,19 @@ flowchart TD
 
 ---
 
-## 🚀 Core Feature Breakdown
+## ðŸš€ Core Feature Breakdown
 
-### 1. 📹 AI Video Call Studio & 2D Talking Avatars
+### 1. ðŸ“¹ AI Video Call Studio & 2D Talking Avatars
 The Video Call Studio mimics modern conferencing tools (Google Meet / Zoom / Microsoft Teams).
 
 - **2D Animated Vector Character**:
   - **Dynamic Lip-Sync**: Syllable and sound-wave-driven mouth shape cycling (`wide-O`, `open-smile`, `articulate`, `neutral`) during active question narration.
   - **Natural Eye Blinking & Head Tilt**: Random interval eye blinks and attentive head tilts when listening to candidate answers.
   - **4 Selectable Interviewer Personas**:
-    1. 👔 **Alex Rivera** (*Lead Architect*) — Technical deep-dives & distributed systems.
-    2. 👑 **Sarah Chen** (*VP of Engineering*) — Strategic architecture & high-level decision making.
-    3. 🔬 **David Miller** (*Senior Staff SDE*) — Algorithms, concurrency & low-level performance.
-    4. 🤝 **Elena Rostova** (*Director of Talent*) — STAR behavioral framework & culture fit.
+    1. ðŸ‘” **Alex Rivera** (*Lead Architect*) â€” Technical deep-dives & distributed systems.
+    2. ðŸ‘‘ **Sarah Chen** (*VP of Engineering*) â€” Strategic architecture & high-level decision making.
+    3. ðŸ”¬ **David Miller** (*Senior Staff SDE*) â€” Algorithms, concurrency & low-level performance.
+    4. ðŸ¤ **Elena Rostova** (*Director of Talent*) â€” STAR behavioral framework & culture fit.
 - **Meeting Room View Modes**:
   - **Split Grid**: Side-by-side equal tiles for 2D Interviewer Avatar and Candidate Webcam.
   - **Code Studio**: Video conference panel docked next to the live Monaco Code Editor.
@@ -112,14 +118,14 @@ The Video Call Studio mimics modern conferencing tools (Google Meet / Zoom / Mic
 
 ---
 
-### 2. 👁️ Real-Time Computer Vision & Body Language Telemetry
+### 2. ðŸ‘ï¸ Real-Time Computer Vision & Body Language Telemetry
 Computed **100% locally in-browser** via an HTML5 canvas processing loop running at ~12 FPS.
 
 ```
-[Webcam Stream] ──> [HTML5 Canvas Offscreen Analyzer] ──> [Feature Detection]
-                                                              │
-   ┌──────────────────────────────────────────────────────────┴───────────────────────────┐
-   ▼                                                          ▼                           ▼
+[Webcam Stream] â”€â”€> [HTML5 Canvas Offscreen Analyzer] â”€â”€> [Feature Detection]
+                                                              â”‚
+   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+   â–¼                                                          â–¼                           â–¼
 [Eye Contact % & Gaze]                             [Posture Alignment]          [Composure & Stability]
 - Vector to camera center                          - Head Y-centroid (slouch)   - Frame-to-frame jitter
 - Gaze: Center, Left, Right, Down                  - Head X-offset (centering)  - Expression symmetry
@@ -130,14 +136,14 @@ Computed **100% locally in-browser** via an HTML5 canvas processing loop running
   - Actionable micro-coaching tips (e.g. *"Great eye contact"*, *"Center face in frame"*, *"Upright posture maintained"*).
 - **Session Aggregate Dossier**:
   - Eye Contact Percentage (e.g. 92%)
-  - Posture Score (0–100)
-  - Composure Index (1–10)
-  - Head Stability Score (0–100)
+  - Posture Score (0â€“100)
+  - Composure Index (1â€“10)
+  - Head Stability Score (0â€“100)
   - Gaze Attention Breakdown (`Center`, `Left`, `Right`, `Down`)
 
 ---
 
-### 3. 💻 Monaco Code Studio & Algorithmic Sandbox
+### 3. ðŸ’» Monaco Code Studio & Algorithmic Sandbox
 - **Industry Standard Editor**: Powered by `@monaco-editor/react` (the engine behind VS Code).
 - **Multi-Language Support**: JavaScript (Node.js), TypeScript, Python 3, Java, C++.
 - **Interactive Sandbox Execution**:
@@ -149,7 +155,7 @@ Computed **100% locally in-browser** via an HTML5 canvas processing loop running
 
 ---
 
-### 4. 🎙️ Dual-Engine Voice Synthesizer & Speech Recognition
+### 4. ðŸŽ™ï¸ Dual-Engine Voice Synthesizer & Speech Recognition
 - **Text-to-Speech (TTS)**: Web Speech Synthesis with persona-based pitch and speech rate modulation.
 - **Speech-to-Text (STT)**: Continuous speech recognition streaming directly into editable text transcripts.
 - **Clarity & Verbal Filler Telemetry**:
@@ -159,7 +165,7 @@ Computed **100% locally in-browser** via an HTML5 canvas processing loop running
 
 ---
 
-### 5. 🎯 4-Stage Hiring Pipeline Simulator
+### 5. ðŸŽ¯ 4-Stage Hiring Pipeline Simulator
 
 | Stage | Round Title | Focus Areas | Key Output |
 | :--- | :--- | :--- | :--- |
@@ -170,7 +176,7 @@ Computed **100% locally in-browser** via an HTML5 canvas processing loop running
 
 ---
 
-### 6. 📊 Multi-Dimensional Competency & Scoring Rubric
+### 6. ðŸ“Š Multi-Dimensional Competency & Scoring Rubric
 
 Every candidate answer is evaluated against 6 core hiring competencies:
 1. **Technical Knowledge & Depth** ($1-10$)
@@ -188,44 +194,44 @@ Every candidate answer is evaluated against 6 core hiring competencies:
 
 ---
 
-### 7. 💳 Credits Gateway & Firebase Authentication
+### 7. ðŸ’³ Credits Gateway & Firebase Authentication
 - **Authentication**: Firebase Authentication supporting Google One-Tap Sign-In and Email/Password credentials, secured with JWT session tokens.
 - **Credit Metering**: Each mock interview session costs 10 credits.
 - **Payment Top-Up**: Razorpay checkout integration with instant credit crediting and local testing fallback.
 
 ---
 
-## 📁 Component Hierarchy & Frontend Architecture
+## ðŸ“ Component Hierarchy & Frontend Architecture
 
 ```
 client/src/
-├── App.jsx                     # Root application router & state manager
-├── main.jsx                    # React 18 DOM root mount point
-├── index.css                   # Global glassmorphism design tokens & keyframes
-├── components/
-│   ├── Navbar.jsx              # App header with credits meter & navigation
-│   ├── AuthPage.jsx            # Full-page login & registration screen
-│   ├── InterviewSetup.jsx      # Mode, Persona, Round & Tech stack configurator
-│   ├── VideoInterviewRoom.jsx  # 2D Avatar Video Call Studio with Camera feed
-│   ├── Avatar2D.jsx            # Vector animated 2D talking avatar component
-│   ├── VisionHUD.jsx           # Live eye contact & posture HUD overlay
-│   ├── InterviewRoom.jsx       # Classical text/audio mock interview room
-│   ├── CodeEditor.jsx          # Monaco code editor sandbox & test runner
-│   ├── AnswerFeedback.jsx      # Per-question AI critique & follow-up modal
-│   ├── FinalReport.jsx         # Executive dossier, Vision breakdown & PDF print
-│   ├── HistoryAnalytics.jsx    # User session history & performance dashboard
-│   └── PricingModal.jsx        # Credit recharge & payment modal
-├── hooks/
-│   ├── useSpeechRecognition.js # Web Speech Recognition continuous STT hook
-│   └── useTextToSpeech.js      # Web Speech Synthesis persona-based TTS hook
-└── utils/
-    ├── visionTelemetry.js      # Client-side computer vision tracking engine
-    └── soundEffects.js         # Web Audio API chime & sound FX synthesizer
+â”œâ”€â”€ App.jsx                     # Root application router & state manager
+â”œâ”€â”€ main.jsx                    # React 18 DOM root mount point
+â”œâ”€â”€ index.css                   # Global glassmorphism design tokens & keyframes
+â”œâ”€â”€ components/
+â”‚   â”œâ”€â”€ Navbar.jsx              # App header with credits meter & navigation
+â”‚   â”œâ”€â”€ AuthPage.jsx            # Full-page login & registration screen
+â”‚   â”œâ”€â”€ InterviewSetup.jsx      # Mode, Persona, Round & Tech stack configurator
+â”‚   â”œâ”€â”€ VideoInterviewRoom.jsx  # 2D Avatar Video Call Studio with Camera feed
+â”‚   â”œâ”€â”€ Avatar2D.jsx            # Vector animated 2D talking avatar component
+â”‚   â”œâ”€â”€ VisionHUD.jsx           # Live eye contact & posture HUD overlay
+â”‚   â”œâ”€â”€ InterviewRoom.jsx       # Classical text/audio mock interview room
+â”‚   â”œâ”€â”€ CodeEditor.jsx          # Monaco code editor sandbox & test runner
+â”‚   â”œâ”€â”€ AnswerFeedback.jsx      # Per-question AI critique & follow-up modal
+â”‚   â”œâ”€â”€ FinalReport.jsx         # Executive dossier, Vision breakdown & PDF print
+â”‚   â”œâ”€â”€ HistoryAnalytics.jsx    # User session history & performance dashboard
+â”‚   â””â”€â”€ PricingModal.jsx        # Credit recharge & payment modal
+â”œâ”€â”€ hooks/
+â”‚   â”œâ”€â”€ useSpeechRecognition.js # Web Speech Recognition continuous STT hook
+â”‚   â””â”€â”€ useTextToSpeech.js      # Web Speech Synthesis persona-based TTS hook
+â””â”€â”€ utils/
+    â”œâ”€â”€ visionTelemetry.js      # Client-side computer vision tracking engine
+    â””â”€â”€ soundEffects.js         # Web Audio API chime & sound FX synthesizer
 ```
 
 ---
 
-## 🔌 Backend API Reference & Schema Definitions
+## ðŸ”Œ Backend API Reference & Schema Definitions
 
 ### 1. `POST /api/interview/generate`
 Generates structured AI interview questions based on role, round, and tech stack.
@@ -298,7 +304,7 @@ Creates Razorpay checkout orders and verifies signatures to credit user balances
 
 ---
 
-## 🔒 Security, In-Browser Privacy & Proctoring
+## ðŸ”’ Security, In-Browser Privacy & Proctoring
 
 - **100% In-Browser Video Privacy**: All webcam video streams and computer vision frame analysis are processed strictly within browser RAM via HTML5 `<canvas>`. No raw video frames, images, or biometric vectors are ever stored or transmitted to external servers.
 - **JWT & HTTP Authorization**: API endpoints require `Authorization: Bearer <token>` verified with `jsonwebtoken`.
@@ -306,7 +312,7 @@ Creates Razorpay checkout orders and verifies signatures to credit user balances
 
 ---
 
-## ⚙️ Installation, Environment Setup & Run Guide
+## âš™ï¸ Installation, Environment Setup & Run Guide
 
 ### Prerequisites
 - Node.js `v18.0+`
@@ -353,4 +359,5 @@ npm run dev
 
 ---
 
-*InterviewAI • Built with React, Node.js, Express, MongoDB, OpenRouter & Firebase.*
+*InterviewAI â€¢ Built with React, Node.js, Express, MongoDB, OpenRouter & Firebase.*
+
